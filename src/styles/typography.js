@@ -27,8 +27,9 @@ export const CardDescription = styled(Text)`
 `
 
 export const CardTitle = styled(Text)`
-  font-size: ${7 * vw};
-  line-height: ${8 * vw};
+  font-size: ${6 * vw};
+  font-weight: bold;
+  line-height: ${7 * vw};
   margin-bottom: 8;
 `
 
@@ -80,14 +81,22 @@ export const ButtonText = styled.Text`
 `
 
 export const GoalCardWrapper = styled.View`
-  background: ${props => props.theme.WHITE};
   border-bottom-color: ${props => props.theme.LIGHT_GREY};
   border-bottom-width: 0.8;
+  display: flex;
+  margin-bottom: 30px;
+  position: relative;
+  width: 100%;
+`
+
+export const GoalCardInnerWrapper = styled.View`
   display: flex;
   flex-direction: row;
   padding-top: 15px;
   padding-bottom: 15px;
+  position: relative;
   width: 100%;
+  z-index: 1;
 `
 
 export const GoalWrapper = styled.View`

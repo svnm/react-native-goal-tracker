@@ -12,7 +12,7 @@ const INITIAL_STATE = {
     {
       id: uuidv1(),
       title: 'My first goal to complete in a few seconds',
-      description: 'This goal is important and will be completed as soon as possible',
+      description: 'This goal is important. It will be completed as soon as possible',
       complete: false,
       completed_at: null
     }
@@ -20,9 +20,6 @@ const INITIAL_STATE = {
 }
 
 const Goals = (state = INITIAL_STATE, action) => {
-  const { goals } = state
-  let index
-
   switch (action.type) {
     case ADD_GOAL:
       return {
@@ -30,15 +27,15 @@ const Goals = (state = INITIAL_STATE, action) => {
         goals: [action.payload.goal].concat(state.goals)
       }
     case REMOVE_GOAL:
-      return Object.assign({}, state, {
-        goals: [
-          ...state.goals,
-          state.goals.filter(g => g !== action.payload.goal)
-        ]
-      })
+      return {
+        ...state,
+        goals: state.goals.filter(g => g !== action.payload.goal)
+      }
     case REOPEN_GOAL:
     case COMPLETE_GOAL:
-      index = goals.findIndex(({ id }) => id === action.payload.goal.id)
+      const { goals } = state
+      const index = goals.findIndex(({ id }) => id === action.payload.goal.id)
+
       if (index > -1) {
         goals[index] = action.payload.goal
       }
