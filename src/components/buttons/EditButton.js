@@ -12,10 +12,6 @@ export const EditButton = ({ onPress }) => (
     rejectResponderTermination
     underlayColor="white"
   >
-    <Ionicons
-      name="md-create"
-      size={28}
-      color={colors.DARK_BLUE}
-    />
+    <Ionicons name="md-create" size={28} color={colors.DARK_BLUE} />
   </TouchableHighlight>
 )

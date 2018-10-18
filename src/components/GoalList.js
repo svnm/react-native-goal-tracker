@@ -8,13 +8,19 @@ import { GoalListWrapper } from '../styles/typography'
 
 export class GoalList extends Component {
   render() {
-    const { goals, reopenGoal, completeGoal, removeGoal, navigation } = this.props
+    const {
+      goals,
+      reopenGoal,
+      completeGoal,
+      removeGoal,
+      navigation
+    } = this.props
 
     return (
       <GoalListWrapper>
         <FlatList
           data={goals}
-          keyExtractor={(goal) => goal.id}
+          keyExtractor={goal => goal.id}
           renderItem={({ item: goal }) => {
             return (
               <GoalCard

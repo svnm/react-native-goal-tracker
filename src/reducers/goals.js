@@ -13,24 +13,25 @@ const INITIAL_STATE = {
     {
       id: uuidv1(),
       title: 'Basketball training',
-      description: 'Train shooting for 1 hour, passing for 1 hour and defence 1 hours',
+      description:
+        'Train shooting for 1 hour, passing for 1 hour and defence 1 hours',
       complete: true,
-      completed_at: Date.now(),
+      completed_at: Date.now()
     },
     {
       id: uuidv1(),
       title: 'Gym',
       description: 'Running, weights, plyometrics, squats and stretching',
       complete: false,
-      completed_at: null,
+      completed_at: null
     },
     {
       id: uuidv1(),
       title: 'Tennis practice match',
       description: 'Play 3 sets practice match',
       complete: false,
-      completed_at: null,
-    },
+      completed_at: null
+    }
   ]
 }
 

@@ -18,7 +18,13 @@ import {
   CompleteWrapper
 } from '../styles/typography'
 
-export const GoalCard = ({ goal, reopenGoal, completeGoal, removeGoal, navigation }) => (
+export const GoalCard = ({
+  goal,
+  reopenGoal,
+  completeGoal,
+  removeGoal,
+  navigation
+}) => (
   <GoalCardWrapper>
     <Swipeout
       right={[

@@ -26,7 +26,7 @@ const mapDispatchToProps = dispatch => {
 
 const mapStateToProps = ({ Goals }) => {
   return {
-    goals: Goals.goals.filter(g => !g.complete),
+    goals: Goals.goals.filter(g => !g.complete)
   }
 }
 

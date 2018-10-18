@@ -120,7 +120,8 @@ export const EditGoalWrapper = styled.View`
 
 export const GoalInput = styled.TextInput`
   background-color: white;
-  border-bottom-color: ${props => props.valid ? props.theme.LIGHT_GREY : props.theme.RED};
+  border-bottom-color: ${props =>
+    props.valid ? props.theme.LIGHT_GREY : props.theme.RED};
   border-bottom-width: 0.8;
   font-size: 22;
   margin-bottom: 20;

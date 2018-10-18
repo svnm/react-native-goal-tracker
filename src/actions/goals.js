@@ -1,4 +1,10 @@
-import { ADD_GOAL, EDIT_GOAL, REMOVE_GOAL, REOPEN_GOAL, COMPLETE_GOAL } from './types'
+import {
+  ADD_GOAL,
+  EDIT_GOAL,
+  REMOVE_GOAL,
+  REOPEN_GOAL,
+  COMPLETE_GOAL
+} from './types'
 
 export const addGoal = goal => {
   return {
