@@ -4,6 +4,10 @@
   "description": "A react native goal tracker app",
   "author": "Steven Martin",
   "main": "main.js",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "node node_modules/jest/bin/jest.js"
+  },
   "dependencies": {
     "date-fns": "^1.29.0",
     "expo": "25.0.0",
@@ -21,6 +25,8 @@
   "devDependencies": {
     "eslint": "4.3.0",
     "eslint-config-prettier": "2.3.0",
-    "prettier": "1.5.3"
+    "jest-expo": "^25.0.0",
+    "prettier": "1.5.3",
+    "react-test-renderer": "16.2.0"
   }
 }
