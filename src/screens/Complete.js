@@ -24,9 +24,11 @@ const mapDispatchToProps = dispatch => {
   }
 }
 
-const mapStateToProps = state => ({
-  goals: state.Goals.goals
-})
+const mapStateToProps = ({ Goals }) => {
+  return {
+    goals: Goals.goals.filter(g => g.complete),
+  }
+}
 
 export default connect(
   mapStateToProps,

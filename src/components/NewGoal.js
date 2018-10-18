@@ -1,6 +1,8 @@
 // @flow
 
 import React, { Component } from 'react'
+import uuidv1 from 'uuid/v1'
+
 import Button from '../components/Button'
 import { NewGoalWrapper, GoalTitle, GoalInput } from '../styles/typography'
 
@@ -15,7 +17,7 @@ export class NewGoal extends Component {
     const { title, description } = this.state
 
     if (title !== null && description !== null) {
-      addGoal({ title, description, complete: false, completed_at: null })
+      addGoal({ id: uuidv1(), title, description, complete: false, completed_at: null })
     }
   }
 

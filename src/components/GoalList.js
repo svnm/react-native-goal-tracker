@@ -14,11 +14,10 @@ export class GoalList extends Component {
       <GoalListWrapper>
         <FlatList
           data={goals}
-          keyExtractor={(item, index) => index}
-          renderItem={({ item: goal, index }) => {
+          keyExtractor={(goal) => goal.id}
+          renderItem={({ item: goal }) => {
             return (
               <GoalCard
-                id={index}
                 goal={goal}
                 reopenGoal={reopenGoal}
                 completeGoal={completeGoal}
