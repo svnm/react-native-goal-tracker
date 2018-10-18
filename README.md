@@ -17,6 +17,13 @@ Open and start the app using the [expo CLI](https://docs.expo.io/versions/latest
 expo start
 ```
 
+## Test and Lint
+
+```
+npm run lint
+npm run test
+```
+
 ## Question 1
 
 ```jsx
