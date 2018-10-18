@@ -1,0 +1,5 @@
+node_modules/**/*
+.expo/*
+npm-debug.*
+assets/images/demo.sketch
+.DS_Store

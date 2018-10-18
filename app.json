@@ -1,0 +1,23 @@
+{
+  "expo": {
+    "name": "react-native-goal-tracker",
+    "description": "A react native goal tracker app",
+    "slug": "react-native-goal-tracker",
+    "privacy": "public",
+    "sdkVersion": "25.0.0",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "primaryColor": "#cccccc",
+    "icon": "./assets/icons/app.png",
+    "loading": {
+      "icon": "./assets/icons/loading.png",
+      "hideExponentText": false
+    },
+    "packagerOpts": {
+      "assetExts": ["ttf", "mp4"]
+    },
+    "ios": {
+      "supportsTablet": true
+    }
+  }
+}

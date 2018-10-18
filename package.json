@@ -1,0 +1,24 @@
+{
+  "name": "react-native-goal-tracker",
+  "version": "1.0.0",
+  "description": "A react native goal tracker app",
+  "author": "Steven Martin",
+  "main": "main.js",
+  "dependencies": {
+    "date-fns": "^1.29.0",
+    "expo": "25.0.0",
+    "react": "16.2.0",
+    "react-native": "github:expo/react-native#sdk-25.0.0",
+    "react-navigation": "1.5.8",
+    "react-redux": "5.0.7",
+    "redux": "3.7.2",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "2.2.0",
+    "styled-components": "3.2.3"
+  },
+  "devDependencies": {
+    "eslint": "4.3.0",
+    "eslint-config-prettier": "2.3.0",
+    "prettier": "1.5.3"
+  }
+}
