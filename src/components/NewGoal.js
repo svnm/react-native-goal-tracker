@@ -13,11 +13,12 @@ export class NewGoal extends Component {
   }
 
   handleAddClick = event => {
-    const { addGoal } = this.props
+    const { addGoal, navigation } = this.props
     const { title, description } = this.state
 
     if (title !== null && description !== null) {
       addGoal({ id: uuidv1(), title, description, complete: false, completed_at: null })
+      navigation.goBack()
     }
   }
 

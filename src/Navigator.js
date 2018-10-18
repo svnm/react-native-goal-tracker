@@ -7,7 +7,7 @@ import IncompleteScreen from './screens/Incomplete'
 import CompleteScreen from './screens/Complete'
 import NewScreen from './screens/New'
 
-import { NewIcon, BackIcon } from './components/icons'
+import { NewIcon } from './components/icons'
 
 import { colors } from './styles/colors'
 
@@ -22,7 +22,7 @@ const AppMainTab = TabNavigator(
         headerStyle: {
           backgroundColor: colors.DARK_BLUE
         },
-        headerTitle: 'Goal Tracker',
+        headerTitle: 'All Goals',
         headerTitleStyle: {
           color: colors.WHITE
         },
@@ -38,7 +38,7 @@ const AppMainTab = TabNavigator(
         headerStyle: {
           backgroundColor: colors.DARK_BLUE
         },
-        headerTitle: 'Incomplete',
+        headerTitle: 'Incomplete Goals',
         headerTitleStyle: {
           color: colors.WHITE
         },
@@ -58,7 +58,7 @@ const AppMainTab = TabNavigator(
         headerStyle: {
           backgroundColor: colors.DARK_BLUE
         },
-        headerTitle: 'Complete',
+        headerTitle: 'Complete Goals',
         headerTitleStyle: {
           color: colors.WHITE
         },
@@ -104,23 +104,6 @@ const AppMainStack = StackNavigator(
 const AppDrawer = DrawerNavigator({
   Home: {
     screen: AppMainStack
-  },
-  New: {
-    screen: NewScreen,
-    navigationOptions: ({ navigation }) => ({
-      drawerLabel: 'New',
-      drawerIcon: ({ tintColor }) => (
-        <Ionicons name="md-add" size={23} color={tintColor} />
-      ),
-      headerStyle: {
-        backgroundColor: colors.DARK_BLUE
-      },
-      headerTitle: 'New',
-      headerTitleStyle: {
-        color: colors.WHITE
-      },
-      headerLeft: <BackIcon onPress={() => navigation.goBack()} />
-    })
   }
 })
 

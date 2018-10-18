@@ -64,12 +64,14 @@ export const LoaderWrapper = styled.View`
 `
 
 export const ButtonContainer = styled.TouchableHighlight`
-  padding: 20px;
-  width: 130;
+  align-items: center;
   background-color: ${props => props.theme.DARK_BLUE};
   border-radius: 5;
   justify-content: center;
-  align-items: center;
+  margin-top: 20px;
+  margin-left: 40px;
+  padding: 20px;
+  width: 130;
 `
 
 export const ButtonText = styled.Text`
@@ -79,7 +81,7 @@ export const ButtonText = styled.Text`
 
 export const GoalCardWrapper = styled.View`
   background: ${props => props.theme.WHITE};
-  border-bottom-color: #d3d3d3;
+  border-bottom-color: ${props => props.theme.LIGHT_GREY};
   border-bottom-width: 0.8;
   display: flex;
   flex-direction: row;
@@ -104,11 +106,15 @@ export const NewGoalWrapper = styled.View`
 `
 
 export const GoalInput = styled.TextInput`
-  font-size: 24;
   background-color: white;
-  width: 100%;
-  padding: 20px;
+  border-bottom-color: ${props => props.theme.LIGHT_GREY};
+  border-bottom-width: 0.8;
+  font-size: 22;
   margin-bottom: 20;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 40px;
+  width: 100%;
 `
 
 export const GoalTitle = styled.Text`
