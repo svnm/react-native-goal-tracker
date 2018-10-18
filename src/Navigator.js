@@ -29,6 +29,22 @@ const AppMainTab = TabNavigator(
         headerRight: <NewIcon onPress={() => navigation.navigate('New')} />
       })
     },
+    Incomplete: {
+      screen: IncompleteScreen,
+      navigationOptions: ({ navigation }) => ({
+        tabBarIcon: ({ tintColor }) => (
+          <Ionicons name="md-radio-button-off" size={23} color={tintColor} />
+        ),
+        headerStyle: {
+          backgroundColor: colors.DARK_BLUE
+        },
+        headerTitle: 'Incomplete',
+        headerTitleStyle: {
+          color: colors.WHITE
+        },
+        headerRight: <NewIcon onPress={() => navigation.navigate('New')} />
+      })
+    },
     Complete: {
       screen: CompleteScreen,
       navigationOptions: ({ navigation }) => ({
@@ -43,22 +59,6 @@ const AppMainTab = TabNavigator(
           backgroundColor: colors.DARK_BLUE
         },
         headerTitle: 'Complete',
-        headerTitleStyle: {
-          color: colors.WHITE
-        },
-        headerRight: <NewIcon onPress={() => navigation.navigate('New')} />
-      })
-    },
-    Incomplete: {
-      screen: IncompleteScreen,
-      navigationOptions: ({ navigation }) => ({
-        tabBarIcon: ({ tintColor }) => (
-          <Ionicons name="md-radio-button-off" size={23} color={tintColor} />
-        ),
-        headerStyle: {
-          backgroundColor: colors.DARK_BLUE
-        },
-        headerTitle: 'Incomplete',
         headerTitleStyle: {
           color: colors.WHITE
         },
@@ -95,7 +95,7 @@ const AppMainStack = StackNavigator(
   },
   {
     cardStyle: {
-      backgroundColor: colors.LIGHT_BLUE
+      backgroundColor: colors.WHITE
     },
     mode: 'modal'
   }

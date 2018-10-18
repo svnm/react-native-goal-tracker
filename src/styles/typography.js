@@ -41,8 +41,8 @@ export const Date = styled(Text)`
 export const CompleteWrapper = styled.View`
   display: flex;
   justify-content: center;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 5%;
+  padding-right: 5%;
 `
 
 export const IconRightContainer = styled.TouchableOpacity`
@@ -79,15 +79,18 @@ export const ButtonText = styled.Text`
 
 export const GoalCardWrapper = styled.View`
   background: ${props => props.theme.WHITE};
+  border-bottom-color: #d3d3d3;
+  border-bottom-width: 0.8;
   display: flex;
   flex-direction: row;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   width: 100%;
 `
 
 export const GoalWrapper = styled.View`
   display: flex;
+  width: 80%;
 `
 
 export const GoalListWrapper = styled.View`

@@ -11,8 +11,8 @@ const INITIAL_STATE = {
   goals: [
     {
       id: uuidv1(),
-      title: 'My first goal',
-      description: 'This goal will be completed very soon',
+      title: 'My first goal to complete in a few seconds',
+      description: 'This goal is important and will be completed as soon as possible',
       complete: false,
       completed_at: null
     }
