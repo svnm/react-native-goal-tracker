@@ -64,7 +64,7 @@ export const LoaderWrapper = styled.View`
   background: ${props => props.theme.DARK_BLUE};
 `
 
-export const ButtonContainer = styled.TouchableHighlight`
+export const ButtonWrapper = styled.TouchableHighlight`
   align-items: center;
   background-color: ${props => props.theme.DARK_BLUE};
   border-radius: 5;
@@ -116,7 +116,7 @@ export const NewGoalWrapper = styled.View`
 
 export const GoalInput = styled.TextInput`
   background-color: white;
-  border-bottom-color: ${props => props.theme.LIGHT_GREY};
+  border-bottom-color: ${props => props.valid ? props.theme.LIGHT_GREY : props.theme.RED};
   border-bottom-width: 0.8;
   font-size: 22;
   margin-bottom: 20;
