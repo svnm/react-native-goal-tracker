@@ -1,20 +1,6 @@
 import React, { Component } from 'react'
 import { withTheme } from 'styled-components'
-import styled from 'styled-components/native'
-
-const ButtonContainer = styled.TouchableHighlight`
-  width: 130;
-  height: 40;
-  background-color: ${props => props.theme.DARK_BLUE};
-  border-radius: 5;
-  justify-content: center;
-  align-items: center;
-`
-
-const Text = styled.Text`
-  font-size: 20;
-  color: ${props => props.theme.WHITE};
-`
+import { ButtonContainer, ButtonText } from '../styles/typography'
 
 class Button extends Component {
   render() {
@@ -22,7 +8,7 @@ class Button extends Component {
 
     return (
       <ButtonContainer underlayColor={theme.DARK_BLUE} onPress={onPress}>
-        <Text>{text}</Text>
+        <ButtonText>{text}</ButtonText>
       </ButtonContainer>
     )
   }

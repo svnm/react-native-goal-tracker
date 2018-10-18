@@ -2,7 +2,7 @@
 
 import React, { Component } from 'react'
 import { ActivityIndicator } from 'react-native'
-import styled from 'styled-components/native'
+import { LoaderWrapper } from '../styles/typography'
 
 export class AppLoader extends Component {
   render() {
@@ -13,10 +13,3 @@ export class AppLoader extends Component {
     )
   }
 }
-
-const LoaderWrapper = styled.View`
-  flex: 1;
-  justify-content: center;
-  background: ${props => props.theme.DARK_BLUE};
-  background: #071262;
-`

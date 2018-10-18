@@ -4,13 +4,14 @@ import React, { Component } from 'react'
 import { View, FlatList } from 'react-native'
 
 import { GoalCard } from './GoalCard'
+import { GoalListWrapper } from '../styles/typography'
 
 export class GoalList extends Component {
   render() {
     const { goals, reopenGoal, completeGoal } = this.props
 
     return (
-      <View style={{ flex: 1, width: '100%' }}>
+      <GoalListWrapper>
         <FlatList
           data={goals}
           keyExtractor={(item, index) => index}
@@ -25,7 +26,7 @@ export class GoalList extends Component {
             )
           }}
         />
-      </View>
+      </GoalListWrapper>
     )
   }
 }

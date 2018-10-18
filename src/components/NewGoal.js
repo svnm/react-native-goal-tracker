@@ -1,9 +1,8 @@
 // @flow
 
 import React, { Component } from 'react'
-import { TextInput, View } from 'react-native'
 import Button from '../components/Button'
-import { TitleText } from '../styles/typography'
+import { NewGoalWrapper, GoalTitle, GoalInput } from '../styles/typography'
 
 export class NewGoal extends Component {
   state = {
@@ -24,29 +23,15 @@ export class NewGoal extends Component {
     const { title, description } = this.state
 
     return (
-      <View style={{ flex: 1, width: '100%' }}>
-        <TitleText>Add a new Goal</TitleText>
-        <TextInput
+      <NewGoalWrapper>
+        <GoalTitle>Add a new Goal</GoalTitle>
+        <GoalInput
           onChangeText={title => this.setState({ title })}
-          style={{
-            fontSize: 24,
-            backgroundColor: 'white',
-            width: '100%',
-            padding: 10,
-            marginBottom: 20
-          }}
           autoFocus
           placeholder="Title"
         />
-        <TextInput
+        <GoalInput
           onChangeText={description => this.setState({ description })}
-          style={{
-            fontSize: 24,
-            backgroundColor: 'white',
-            width: '100%',
-            padding: 10,
-            marginBottom: 20
-          }}
           placeholder="Description"
         />
         <Button
@@ -55,7 +40,7 @@ export class NewGoal extends Component {
             this.handleAddClick()
           }}
         />
-      </View>
+      </NewGoalWrapper>
     )
   }
 }

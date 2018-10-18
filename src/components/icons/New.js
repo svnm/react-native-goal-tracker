@@ -1,12 +1,7 @@
 import React from 'react'
-import styled from 'styled-components/native'
 import { Ionicons } from '@expo/vector-icons'
 
-const IconRightContainer = styled.TouchableOpacity`
-  height: 100%;
-  padding-right: 15;
-  justify-content: center;
-`
+import { IconRightContainer } from '../../styles/typography'
 
 const New = ({ onPress }) => (
   <IconRightContainer onPress={onPress}>
