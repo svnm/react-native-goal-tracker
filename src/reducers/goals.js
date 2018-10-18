@@ -2,6 +2,7 @@ import uuidv1 from 'uuid/v1'
 
 import {
   ADD_GOAL,
+  EDIT_GOAL,
   REMOVE_GOAL,
   REOPEN_GOAL,
   COMPLETE_GOAL
@@ -11,11 +12,25 @@ const INITIAL_STATE = {
   goals: [
     {
       id: uuidv1(),
-      title: 'My first goal to complete in a few seconds',
-      description: 'This goal is important. It will be completed as soon as possible',
+      title: 'Basketball training',
+      description: 'Train shooting for 1 hour, passing for 1 hour and defence 1 hours',
+      complete: true,
+      completed_at: Date.now(),
+    },
+    {
+      id: uuidv1(),
+      title: 'Gym',
+      description: 'Running, weights, plyometrics, squats and stretching',
       complete: false,
-      completed_at: null
-    }
+      completed_at: null,
+    },
+    {
+      id: uuidv1(),
+      title: 'Tennis practice match',
+      description: 'Play 3 sets practice match',
+      complete: false,
+      completed_at: null,
+    },
   ]
 }
 
@@ -33,6 +48,7 @@ const Goals = (state = INITIAL_STATE, action) => {
       }
     case REOPEN_GOAL:
     case COMPLETE_GOAL:
+    case EDIT_GOAL:
       const { goals } = state
       const index = goals.findIndex(({ id }) => id === action.payload.goal.id)
 

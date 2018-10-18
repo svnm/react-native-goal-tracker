@@ -8,7 +8,7 @@ import { GoalListWrapper } from '../styles/typography'
 
 export class GoalList extends Component {
   render() {
-    const { goals, reopenGoal, completeGoal, removeGoal } = this.props
+    const { goals, reopenGoal, completeGoal, removeGoal, navigation } = this.props
 
     return (
       <GoalListWrapper>
@@ -22,6 +22,7 @@ export class GoalList extends Component {
                 reopenGoal={reopenGoal}
                 completeGoal={completeGoal}
                 removeGoal={removeGoal}
+                navigation={navigation}
               />
             )
           }}

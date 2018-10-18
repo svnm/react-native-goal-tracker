@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { withTheme } from 'styled-components'
-import { ButtonWrapper, ButtonText } from '../styles/typography'
+import { ButtonWrapper, ButtonText } from '../../styles/typography'
 
 class Button extends Component {
   render() {

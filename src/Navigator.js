@@ -6,6 +6,7 @@ import HomeScreen from './screens/Home'
 import IncompleteScreen from './screens/Incomplete'
 import CompleteScreen from './screens/Complete'
 import NewScreen from './screens/New'
+import EditScreen from './screens/Edit'
 
 import { NewIcon } from './components/icons'
 
@@ -91,7 +92,8 @@ const AppMainTab = TabNavigator(
 const AppMainStack = StackNavigator(
   {
     Home: { screen: AppMainTab },
-    New: { screen: NewScreen }
+    New: { screen: NewScreen },
+    Edit: { screen: EditScreen }
   },
   {
     cardStyle: {

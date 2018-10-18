@@ -1,8 +1,15 @@
-import { ADD_GOAL, REMOVE_GOAL, REOPEN_GOAL, COMPLETE_GOAL } from './types'
+import { ADD_GOAL, EDIT_GOAL, REMOVE_GOAL, REOPEN_GOAL, COMPLETE_GOAL } from './types'
 
 export const addGoal = goal => {
   return {
     type: ADD_GOAL,
+    payload: { goal }
+  }
+}
+
+export const editGoal = goal => {
+  return {
+    type: EDIT_GOAL,
     payload: { goal }
   }
 }

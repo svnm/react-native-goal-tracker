@@ -1,32 +1,33 @@
 // @flow
 
 import React, { Component } from 'react'
-import uuidv1 from 'uuid/v1'
 
 import Button from '../components/buttons/Button'
-import { NewGoalWrapper, GoalTitle, GoalInput } from '../styles/typography'
+import { EditGoalWrapper, GoalTitle, GoalInput } from '../styles/typography'
 
-export class NewGoal extends Component {
-  state = {
-    title: '',
-    description: '',
-    validationSubmit: false
+export class EditGoal extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      title: props.goal.title,
+      description: props.goal.description,
+      validationSubmit: true
+    }
   }
 
-  handleAddClick = event => {
-    const { addGoal, navigation } = this.props
+  handleEditClick = event => {
+    const { editGoal, navigation, goal } = this.props
     const { title, description } = this.state
 
     this.setState({ validationSubmit: true })
 
     if (title !== '' && description !== '') {
-      addGoal({
-        id: uuidv1(),
-        title,
-        description,
-        complete: false,
-        completed_at: null
-      })
+      editGoal(
+        Object.assign({}, goal, {
+          title: title,
+          description: description
+        })
+      )
       navigation.goBack()
     }
   }
@@ -47,11 +48,12 @@ export class NewGoal extends Component {
     }
 
     return (
-      <NewGoalWrapper>
-        <GoalTitle>Add a new Goal</GoalTitle>
+      <EditGoalWrapper>
+        <GoalTitle>Edit your Goal</GoalTitle>
         <GoalInput
           multiline={true}
           valid={titleValid}
+          value={title}
           onChangeText={title => this.setState({ title })}
           autoFocus
           placeholder="Title"
@@ -59,16 +61,17 @@ export class NewGoal extends Component {
         <GoalInput
           multiline={true}
           valid={descriptionValid}
+          value={description}
           onChangeText={description => this.setState({ description })}
           placeholder="Description"
         />
         <Button
-          text="Add"
+          text="Save"
           onPress={() => {
-            this.handleAddClick()
+            this.handleEditClick()
           }}
         />
-      </NewGoalWrapper>
+      </EditGoalWrapper>
     )
   }
 }
