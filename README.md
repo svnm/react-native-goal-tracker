@@ -24,7 +24,7 @@ npm run lint
 npm run test
 ```
 
-## Question 1
+## Question
 
 ```jsx
 this.setState({ counter: this.state.counter + this.props.increment })
